@@ -121,7 +121,7 @@ class BranchSpecification:
                     repo.git.checkout(["-f", branch.branch])
                     success = True
                 except:
-                    print "Encountered error checking out"
+                    print "Encountered error checking out: " + name + " " + branch.branch
                     time.sleep(10)
                     run_batch_command(["rm", "-f", repo.working_tree_dir + "/.git/index.lock"])
 
