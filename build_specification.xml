@@ -278,7 +278,8 @@
     <cts repo="ssh://majanes@git-amr-2.devtools.intel.com:29418/otc_gen_graphics-khronos-glconform.git"
          branch="origin/master-gbm"/>
 
-    <prerelease repo="ssh://majanes@git-amr-3.devtools.intel.com:29418/otc_gen_graphics-mesa_ci_prerelease.git"/>
+    <prerelease repo="ssh://majanes@git-amr-3.devtools.intel.com:29418/otc_gen_graphics-mesa_ci_prerelease.git"
+                branch="9669b4bd88ecd1ec056f8522df24f23157b45936"/>
 
     <shaderc repo="git://github.com/jekstrand/shaderc"
              branch="shaderc/master">
