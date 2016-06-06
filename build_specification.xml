@@ -279,7 +279,7 @@
          branch="origin/master-gbm"/>
 
     <prerelease repo="ssh://majanes@git-amr-3.devtools.intel.com:29418/otc_gen_graphics-mesa_ci_prerelease.git"
-                branch="04b88f8f676efd0bdba32b48a5e7717ab0e3588f"/>
+                branch="d498c2f6265e4073f69bc23efe50f64ad2210fec"/>
 
     <shaderc repo="git://github.com/jekstrand/shaderc"
              branch="shaderc/master">
