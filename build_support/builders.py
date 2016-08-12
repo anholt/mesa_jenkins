@@ -420,6 +420,7 @@ class PiglitTester(object):
         cmd = [self.build_root + "/bin/piglit",
                "run",
                "-o",
+               "--junit-subtests",
                "-p", "gbm",
                "-b", "junit",
                "--junit_suffix", "." + suffix + o.arch,
