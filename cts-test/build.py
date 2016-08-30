@@ -142,6 +142,7 @@ class CtsBuilder:
                "run",
                #"-p", "gbm",
                "-b", "junit",
+               "--junit-subtests",
                "--config", conf_file,
                "-c",
                "--exclude-tests", "esext-cts",

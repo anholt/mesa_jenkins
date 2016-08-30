@@ -260,6 +260,7 @@ class DeqpBuilder:
                "run",
                "-p", "gbm",
                "-o",
+               "--junit-subtests",
                "-b", "junit",
                "--config", conf_file,
                "-c",
