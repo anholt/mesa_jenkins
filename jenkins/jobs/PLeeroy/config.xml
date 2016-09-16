@@ -150,7 +150,6 @@ python -u ${project}/build.py --arch ${arch} --result_path ${result_path} --conf
     exit 0
 fi
 killall Xorg || true
-sudo /usr/local/bin/chmodtty9.sh
 Xorg :9 vt9 -retro -sharevts -logfile /tmp/xorg.log&amp;
 rm -rf /tmp/build_root
 sleep 10  # Xorg doesn&apos;t always settle before starting piglit and that causes problems
