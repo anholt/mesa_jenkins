@@ -150,7 +150,7 @@ python -u ${project}/build.py --arch ${arch} --result_path ${result_path} --conf
     exit 0
 fi
 killall Xorg || true
-Xorg :9 vt9 -retro -sharevts -logfile /tmp/xorg.log&amp;
+Xorg :9 vt9 -retro -sharevts&amp;
 rm -rf /tmp/build_root
 sleep 10  # Xorg doesn&apos;t always settle before starting piglit and that causes problems
 python -u ${project}/build.py --arch ${arch} --result_path ${result_path} --config ${config} --type ${type} --hardware ${hardware} --action clean,build,test --shard ${shard} --env &quot;${env}&quot; ${extra_arg}
