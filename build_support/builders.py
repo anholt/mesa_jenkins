@@ -124,8 +124,8 @@ def check_gpu_hang(identify_test=True):
         if "*error* ring create req" in a_line.lower():
             hang_text = a_line
             break
-    if not hang_text:
-        return
+    # if not hang_text:
+    #     return
 
     # obtain the pid from the hang_text
     br = ProjectMap().build_root()
