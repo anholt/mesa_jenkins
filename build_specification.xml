@@ -86,15 +86,7 @@
     </project>
 
     <project name="glescts-full">
-      <prerequisite name="glescts-test" hardware="skl,bdw" shard="5"/>
-      <prerequisite name="glescts-test" hardware="hsw" shard="4"/>
-      <prerequisite name="glescts-test" hardware="bsw,byt" shard="8" only_for_type="daily"/>
-      <prerequisite name="glescts-test" hardware="g33,g45,ilk,g965,bxt,ivb,snb" shard="3" only_for_type="daily"/>
-      <prerequisite name="glescts-test"
-                    only_for_type="daily"
-                    arch="m32"
-                    hardware="snb,ivb,hsw,bdw,skl"
-                    shard="5"/>
+      <prerequisite name="glescts-test" hardware="byt" shard="8"/>
     </project>
 
     <project name="piglit">
@@ -175,21 +167,10 @@
     <!-- all-test has no build.py, and exists only to provide
          dependency relationships. -->
     <project name="all-test">
-      <prerequisite name="scons-buildtest" hardware="builder"/>
       <prerequisite name="piglit-test"
-                    hardware="snbgt1,snbgt2,ivbgt1,ivbgt2,hswgt1,hswgt2,hswgt3e,bdwgt3e,sklgt2,sklgt4e"
-                    arch="m64"/>
-      <prerequisite name="piglit-test"
-                    only_for_type="daily"
-                    hardware="snbgt1,snbgt2,ivbgt1,ivbgt2,hswgt1,hswgt2,hswgt3e,bdwgt3e,sklgt2,sklgt4e"
-                    arch="m32"/>
-      <prerequisite only_for_type="daily" name="piglit-test" hardware="ilk,bsw,byt,g33,g45,g965,bdwgt2" arch="m64,m32"/>
-      <!-- do not test 32 bit for limited platforms -->
-      <prerequisite only_for_type="daily" name="piglit-test" hardware="bxt,kbl,glk" arch="m64"/>
+                    hardware="byt"
+                    arch="m64,m32"/>
       <prerequisite name="deqp-full"/>
-      <prerequisite name="piglit-cpu-test" hardware="fastgpu" arch="m64"/>
-      <prerequisite name="piglit-cpu-test" only_for_type="daily" hardware="fastgpu" arch="m32"/>
-      <prerequisite name="mesa-buildtest" hardware="builder" arch="m64"/>
       <prerequisite name="cts-full"/>
       <prerequisite name="glescts-full"/>
     </project>
@@ -222,20 +203,11 @@
     </project>
 
     <project name="deqp-full">
-      <prerequisite name="deqp-test" hardware="hsw,skl"/>
-      <prerequisite name="deqp-test" hardware="bdw"/>
-      <prerequisite name="deqp-test"
-                    only_for_type="daily"
-                    hardware="snb,byt,bsw,ivb"/>
-      <prerequisite name="deqp-test"
-                    only_for_type="daily"
-                    arch="m32"
-                    hardware="snb,ivb,hsw,bdw,skl"/>
+      <prerequisite name="deqp-test" hardware="byt" shard="3"/>
     </project>
 
     <project name="cts-full">
-      <prerequisite name="cts-test" hardware="snb,ivb,hsw,bdw,sklgt2,sklgt4e" arch="m64"/>
-      <prerequisite name="cts-test" only_for_type="daily" hardware="g965,g33,ilk,g45,bsw,byt,bxt,kbl" arch="m64"/>
+      <prerequisite name="cts-test" hardware="byt" arch="m64"/>
     </project>
 
     <project name="vulkan-and-gl">
