@@ -48,8 +48,8 @@
     <project name="waffle"/>
 
     <project name="deqp-test" src_dir="deqp"
-             bisect_hardware="bdw,skl,hsw,ivb,snb,byt,bsw,bxt"
-             bisect_arch="m32,m64">
+             bisect_hardware="bxt"
+             bisect_arch="m64">
       <prerequisite name="deqp" hardware="builder"/>
       <prerequisite name="waffle" hardware="builder"/>
       <prerequisite name="mesa" hardware="builder"/>
